@@ -1,0 +1,14 @@
+{
+    "name": "iyba/mates-api",
+    "description": "MATES API Parsing PHP Library",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bhargav Nanekalva",
+            "email": "bhargav@iyba.pro"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
