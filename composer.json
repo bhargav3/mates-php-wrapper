@@ -20,6 +20,6 @@
     "guzzlehttp/guzzle": "~6.0"
   },
   "require-dev": {
-    "psy/psysh": "*"
+    "psy/psysh": "v0.8.6"
   }
 }

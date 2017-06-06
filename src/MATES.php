@@ -73,6 +73,8 @@ class MATES
     }
 
     /**
+     * Get complete response object
+     *
      * @return mixed
      */
     public function getObjects()
@@ -82,9 +84,13 @@ class MATES
         return $reader->extract($this->data)->getContent();
     }
 
+    /**
+     * Get array with complete vessel objects
+     *
+     * @return mixed
+     */
     public function getVesselObjects()
     {
         return $this->getObjects()->VehicleRemarketing;
     }
-
 }

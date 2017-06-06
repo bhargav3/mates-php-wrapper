@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6fcdde4b245d6ecff875c4e8e8bb2108",
-    "content-hash": "ef20ff50d00930a4646789073d2f1285",
+    "hash": "61536c979ba21e665bcbf6534092c70a",
+    "content-hash": "3733c0e5dfb2986bbb608ff547f7db7a",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -687,7 +687,7 @@
         },
         {
             "name": "psy/psysh",
-            "version": "dev-master",
+            "version": "v0.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
