@@ -2,6 +2,9 @@
 
 namespace MATES;
 
+use Laravie\Parser\Xml\Reader;
+use Laravie\Parser\Xml\Document;
+
 /**
  * MATES API base class
  *
@@ -31,6 +34,13 @@ class MATES
     protected $endpoint = '';
 
     /**
+     * MATES XML string
+     *
+     * @var string
+     */
+    protected $data;
+
+    /**
      * MATES constructor.
      * @param $api_key
      * @param $method
@@ -40,6 +50,41 @@ class MATES
     {
         $this->api_key = $api_key;
         $this->method = $method;
+    }
+
+    /**
+     * Returns JSON String
+     * @return mixed
+     */
+    public function getJSON()
+    {
+        $document = new Document();
+        $reader = new Reader($document);
+        return json_encode($reader->extract($this->data)->getContent());
+    }
+
+    /**
+     * Returns XML String
+     * @return mixed
+     */
+    public function getXML()
+    {
+        return $this->data;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getObjects()
+    {
+        $document = new Document();
+        $reader = new Reader($document);
+        return $reader->extract($this->data)->getContent();
+    }
+
+    public function getVesselObjects()
+    {
+        return $this->getObjects()->VehicleRemarketing;
     }
 
 }

@@ -3,8 +3,7 @@
 namespace MATES;
 
 use GuzzleHttp\Client;
-use Laravie\Parser\Xml\Reader;
-use Laravie\Parser\Xml\Document;
+
 
 /**
  * API wrapper for DMM - Bridge API
@@ -13,8 +12,6 @@ use Laravie\Parser\Xml\Document;
  */
 class DMMBridgeAPI extends MATES
 {
-
-    protected $data;
 
     public function __call($method, $parameters)
     {
@@ -25,32 +22,5 @@ class DMMBridgeAPI extends MATES
         $data = $client->request('GET', $this->method . '?' . $query);
         $this->data = $data->getBody();
         return $this;
-    }
-
-    /**
-     * Returns JSON String
-     * @return mixed
-     */
-    public function getJSON()
-    {
-        $document = new Document();
-        $reader = new Reader($document);
-        return json_encode($reader->extract($this->data)->getContent());
-    }
-
-    /**
-     * Returns XML String
-     * @return mixed
-     */
-    public function getXML()
-    {
-        return $this->data;
-    }
-
-    public function getObjects()
-    {
-        $document = new Document();
-        $reader = new Reader($document);
-        return $reader->extract($this->data)->getContent();
     }
 }
