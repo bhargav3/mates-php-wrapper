@@ -1,14 +1,25 @@
 {
-    "name": "iyba/mates-api",
-    "description": "MATES API Parsing PHP Library",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Bhargav Nanekalva",
-            "email": "bhargav@iyba.pro"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {}
+  "name": "iyba/mates-api",
+  "description": "MATES API Parsing PHP Library",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bhargav Nanekalva",
+      "email": "bhargav@iyba.pro"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "MATES\\": "src"
+    }
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "laravie/parser": "~1.0",
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "require-dev": {
+    "psy/psysh": "*"
+  }
 }
