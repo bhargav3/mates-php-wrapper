@@ -18,6 +18,33 @@ MATES API Parsing PHP Library
     'owner' => '1234,1235,1236'
  ];
  
- $dmm->boats($filters);
+ $boats = $dmm->boats($filters);
 
  ```
+
+## Get Complete MATES Response Object
+
+### Format: XML
+
+```php
+$boats->getXML();
+```
+
+### Format: JSON
+
+```php
+$boats->getJSON();
+```
+
+### Format: PHP Object
+
+```php
+$boats->getObjects();
+```
+
+
+### Get Vessel PHP Objects
+
+```php
+$boats->getVesselObjects();
+```
