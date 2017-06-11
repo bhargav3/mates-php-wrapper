@@ -26,7 +26,13 @@ class DMMBridgeAPI extends MATES
         $this->method = $method;
         $this->query = urldecode(http_build_query($parameters[0]));
         $this->endpoint = 'https://services.boatwizard.com/bridge/events/' . $this->api_key . '/';
-        $client = new Client(['base_uri' => $this->endpoint]);
+        $client = new Client(['base_uri' => $this->endpoint,
+            'defaults' => [
+                'headers' => [
+                    'Content-Type' => 'text/xml'
+                ]
+            ]
+        ]);
         $data = $client->request('GET', $this->method . '?' . $this->query);
         $this->data = $data->getBody();
         return $this;
