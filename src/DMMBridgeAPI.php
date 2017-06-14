@@ -20,6 +20,7 @@ class DMMBridgeAPI extends MATES
      * @param $parameters
      * @return $this
      * @method mixed boats() boats($filters) Makes call to boats endpoint
+     * @method mixed count() count($filters) Makes call to count endpoint
      */
     public function __call($method, $parameters)
     {
