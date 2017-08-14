@@ -2,6 +2,11 @@
 MATES API Parsing PHP Library
 
 
+## Installation using composer
+
+`composer require iyba/mates-api`
+
+
 ## Initializing API
  
  

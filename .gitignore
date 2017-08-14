@@ -76,3 +76,5 @@ fabric.properties
 index.php
 
 /tmp/*
+
+/composer.lock
